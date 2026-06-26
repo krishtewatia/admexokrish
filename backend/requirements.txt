@@ -1,0 +1,20 @@
+# ─── Core ───
+fastapi==0.115.12
+uvicorn[standard]==0.34.3
+pydantic[email]==2.11.3
+pydantic-settings==2.9.1
+
+# ─── MongoDB ───
+motor==3.7.1
+
+# ─── Email (Brevo) ───
+httpx==0.28.1
+jinja2==3.1.6
+
+# ─── AI (Optional) ───
+openai==1.82.1
+
+# ─── Utilities ───
+python-dotenv==1.1.0
+loguru==0.7.3
+python-multipart==0.0.20

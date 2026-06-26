@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <style>
+        /* Email-safe inline styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #1a1a2e;
+        }
+        .wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+        }
+        .header {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            padding: 40px 32px;
+            text-align: center;
+        }
+        .header h1 {
+            color: #ffffff;
+            font-size: 26px;
+            margin: 0;
+            font-weight: 700;
+        }
+        .header p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 15px;
+            margin: 8px 0 0 0;
+        }
+        .body-content {
+            padding: 36px 32px;
+        }
+        .body-content h2 {
+            font-size: 20px;
+            margin: 0 0 16px 0;
+            color: #1a1a2e;
+        }
+        .body-content p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #4a4a6a;
+            margin: 0 0 16px 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            margin: 16px 0;
+        }
+        .features {
+            margin: 24px 0;
+            padding: 0;
+        }
+        .features li {
+            font-size: 14px;
+            color: #4a4a6a;
+            padding: 6px 0;
+            list-style: none;
+        }
+        .features li::before {
+            content: "✓ ";
+            color: #6366f1;
+            font-weight: 700;
+        }
+        .footer {
+            background-color: #f8f9fc;
+            padding: 24px 32px;
+            text-align: center;
+            border-top: 1px solid #eef0f5;
+        }
+        .footer p {
+            font-size: 12px;
+            color: #9ca3af;
+            margin: 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div style="padding: 24px 16px;">
+        <div class="wrapper">
+            <!-- Header -->
+            <div class="header">
+                <h1>Welcome to Our Platform!</h1>
+                <p>We're excited to have you on board</p>
+            </div>
+
+            <!-- Body -->
+            <div class="body-content">
+                <h2>Hi {{ name }},</h2>
+                <p>
+                    Thank you for your interest{% if company %} — we're thrilled to connect with someone from <strong>{{ company }}</strong>{% endif %}.
+                    We received your information and our team will be reaching out soon.
+                </p>
+                <p>In the meantime, here's what you can explore:</p>
+                <ul class="features">
+                    <li>Access your personalized dashboard</li>
+                    <li>Browse our product documentation</li>
+                    <li>Schedule a demo with our team</li>
+                    <li>Join our community forum</li>
+                </ul>
+
+                <div style="text-align: center; margin: 28px 0;">
+                    <a href="https://example.com/dashboard" class="cta-button">
+                        Get Started →
+                    </a>
+                </div>
+
+                <p style="font-size: 14px;">
+                    If you have any questions, just reply to this email — we're always happy to help.
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p>
+                    You're receiving this because you signed up at our website.<br />
+                    © 2026 Lead Management System. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tracking Pixel (invisible) -->
+    <img src="{{ pixel_url }}" width="1" height="1" alt="" style="display:none;border:0;" />
+</body>
+</html>

@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: adh-lead-management-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DB_NAME
+        value: adh_leads_db
+      - key: CORS_ORIGINS
+        sync: false
+      - key: BACKEND_BASE_URL
+        sync: false
+      - key: BREVO_API_KEY
+        sync: false
+      - key: EMAIL_FROM_NAME
+        value: Lead Management
+      - key: EMAIL_FROM_EMAIL
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
